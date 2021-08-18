@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "todocenter3",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authtodocenter3d3f9fe95",
+      "Outputs.UserPoolId"
+    ]
+  }
+}
