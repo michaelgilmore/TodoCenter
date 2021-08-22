@@ -1,5 +1,5 @@
 import React from "react";
-import Amplify from "aws-amplify";
+import Amplify, { Auth } from "aws-amplify";
 import awsExports from "./aws-exports";
 import "./App.css";
 import { AmplifyAuthenticator } from "@aws-amplify/ui-react";
@@ -10,6 +10,7 @@ import ListItems from "./components/List";
 //import { CognitoUser } from "@aws-amplify/auth";
 
 Amplify.configure(awsExports);
+Auth.configure(awsExports);
 
 function App() {
   const [authState, setAuthState] = React.useState("signedout");
